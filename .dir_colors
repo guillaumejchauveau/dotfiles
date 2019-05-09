@@ -1,0 +1,44 @@
+NORMAL 00
+FILE 34
+DIR  01;34
+LINK 36
+EXEC 32
+# Orphaned symlinks
+ORPHAN  31
+MISSING 31
+
+.conf 01;32
+.log  01;32
+
+# Archives, compressed
+.7z   35
+.apk  35
+.arj  35
+.bin  35
+.bz   35
+.bz2  35
+.cab  35
+.deb  35
+.dmg  35
+.gem  35
+.gz   35
+.iso  35
+.jar  35
+.msi  35
+.rar  35
+.rpm  35
+.tar  35
+.tbz  35
+.tbz2 35
+.tgz  35
+.tx   35
+.war  35
+.xpi  35
+.xz   35
+.z    35
+.Z    35
+.zip  35
+
+# Packages
+.deb  01,35
+.rpm  01,35
