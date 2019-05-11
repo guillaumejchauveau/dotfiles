@@ -1,0 +1,42 @@
+[include]
+  path = ~/.gitconfig_user
+[core]
+  excludesfile = ~/.gitignore_global
+  attributesfile = ~/.gitattributes_global
+  quotepath = false
+  trustctime = false
+  editor = nano
+  eol = lf
+  autocrlf = false
+  sharedRepository = 0770
+[push]
+  default = matching
+[color]
+  ui = true
+[merge]
+  tool = vimdiff
+[mergetool]
+  keeptemporaries = false
+  keepbackups = false
+  prompt = false
+  trustexitcode = false
+[alias]
+  last = log -1 --stat
+  cp = cherry-pick
+  co = checkout
+  cl = clone
+  ci = commit
+  st = status -sb
+  br = branch
+  unstage = reset HEAD --
+  dc = diff --cached
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+[fetch]
+  recurseSubmodules = false
+[credential]
+  helper = cache --timeout=3600

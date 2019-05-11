@@ -4,6 +4,7 @@
 !/.oh-my-zsh-custom/**/*
 !/.dir_colors
 !/.gitattributes_global
+!/.gitconfig
 !/.gitignore
 !/.gitignore_global
 !/.gitmodules
