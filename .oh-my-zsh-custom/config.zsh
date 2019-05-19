@@ -10,8 +10,8 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('context' 'dir' 'vcs')
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('background_jobs' 'command_execution_time' 'status' 'time')
+declare -a POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('context' 'dir' 'vcs')
+declare -a POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('background_jobs' 'command_execution_time' 'status' 'time')
 
 
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
