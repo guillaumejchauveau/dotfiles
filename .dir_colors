@@ -1,14 +1,13 @@
-NORMAL 00
+NORMAL 0
 FILE 34
-DIR  01;34
+DIR  34
 LINK 36
 EXEC 32
+FIFO 33
+SOCK 33
 # Orphaned symlinks
 ORPHAN  31
 MISSING 31
-
-.conf 01;32
-.log  01;32
 
 # Archives, compressed
 .7z   35
@@ -38,7 +37,3 @@ MISSING 31
 .z    35
 .Z    35
 .zip  35
-
-# Packages
-.deb  01,35
-.rpm  01,35

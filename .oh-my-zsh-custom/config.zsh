@@ -4,7 +4,7 @@ DISABLE_AUTO_UPDATE='true'
 # Theme
 ZSH_THEME='powerlevel10k/powerlevel10k'
 
-source p10k.zsh
+source $ZSH_CUSTOM/p10k.zsh
 
 
 # Completion
