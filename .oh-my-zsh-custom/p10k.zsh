@@ -355,22 +355,22 @@
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
-      local       meta='%f'       # default foreground
-      local      clean='%F{002}'  # green foreground
-      local   modified='%F{003}'  # yellow foreground
-      local  untracked='%F{005}'  # magenta foreground
-      local conflicted='%F{012}'  # red foreground
-      local   unsynced='%F{006}'  # cyan foreground
-      local    stashed='%F{007}'  # blue foreground
+      local       meta='%f'
+      local      clean='%F{002}'
+      local   modified='%F{003}'
+      local  untracked='%F{005}'
+      local conflicted='%F{001}'
+      local   unsynced='%F{006}'
+      local    stashed='%F{007}'
     else
       # Styling for incomplete and stale Git status.
-      local       meta='%F{008}'  # grey foreground
-      local      clean='%F{008}'  # grey foreground
-      local   modified='%F{008}'  # grey foreground
-      local  untracked='%F{008}'  # grey foreground
-      local conflicted='%F{008}'  # grey foreground
-      local   unsynced='%F{008}'  # grey foreground
-      local    stashed='%F{008}'  # grey foreground
+      local       meta='%F{008}'
+      local      clean='%F{008}'
+      local   modified='%F{008}'
+      local  untracked='%F{008}'
+      local conflicted='%F{008}'
+      local   unsynced='%F{008}'
+      local    stashed='%F{008}'
     fi
 
     local res
