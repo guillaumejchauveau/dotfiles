@@ -4,7 +4,7 @@
 # guillaumejchauveau scheme by Guillaume Chauveau
 
 color00="21/21/21" # Base 00 - Black
-color01="E5/4B/4B" # Base 08 - Red
+color01="ed/65/65" # Base 08 - Red
 color02="C3/E8/8D" # Base 0B - Green
 color03="FA/ED/70" # Base 0A - Yellow
 color04="82/AA/FF" # Base 0D - Blue
