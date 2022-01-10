@@ -46,3 +46,5 @@
   gpgSign = true
 [push]
   gpgSign = if-asked
+[init]
+	defaultBranch = main
