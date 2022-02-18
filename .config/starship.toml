@@ -1,0 +1,110 @@
+format = """
+ $username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$fill\
+$jobs\
+$cmd_duration\
+$status\
+$character\
+$time\
+$line_break \
+[\uf054](green) \
+"""
+
+[username]
+style_root = "red"
+style_user = "bright-black"
+format = "[$user]($style) "
+
+[hostname]
+format = "[\uf564](blue) [$hostname](bright-black) "
+
+[directory]
+fish_style_pwd_dir_length = 1
+truncate_to_repo = true
+truncation_length = 1
+style = "blue"
+read_only = " \uf840"
+
+[git_branch]
+format = "[$branch](bright-black) "
+
+[git_commit]
+format = "[$hash$tag](bright-black) "
+
+[git_status]
+format = "$stashed$ahead_behind$conflicted$staged$modified$untracked"
+stashed = "[\uf187](white) "
+ahead = "[\uf077](bright-blue) "
+behind = "[\uf078](bright-blue) "
+diverged = "[\ufc09](bright-purple) "
+conflicted = "[\uf06a](red) "
+staged = "[\uf111](green) "
+modified = "[\uf10c](yellow) "
+untracked = "[\uf29c](bright-black) "
+
+[fill]
+symbol = " "
+
+[jobs]
+format = "[\uf79f](bright-blue) "
+
+[cmd_duration]
+format = "[$duration](bright-black) "
+
+[status]
+disabled = false
+format = "[($signal_name )$status](red) "
+
+[character]
+success_symbol = "[\uf111](green)"
+error_symbol = "[\uf111](red)"
+
+[time]
+disabled = false
+format = "[$time](bright-black)"
+
+[battery]
+full_symbol = "\uf578"
+unknown_symbol = "\uf590"
+empty_symbol = "\uf58d"
+format = " [$symbol]($style)"
+[[battery.display]]
+threshold = 10
+charging_symbol = "\uf585"
+discharging_symbol = "\uf579"
+style = "red"
+[[battery.display]]
+threshold = 20
+charging_symbol = "\uf586"
+discharging_symbol = "\uf57a"
+style = "red"
+[[battery.display]]
+threshold = 30
+charging_symbol = "\uf587"
+discharging_symbol = "\uf57b"
+style = "red"
+[[battery.display]]
+threshold = 40
+charging_symbol = "\uf588"
+discharging_symbol = "\uf57c"
+style = "yellow"
+[[battery.display]]
+threshold = 60
+charging_symbol = "\uf589"
+discharging_symbol = "\uf57e"
+style = "yellow"
+[[battery.display]]
+threshold = 80
+charging_symbol = "\uf58a"
+discharging_symbol = "\uf580"
+style = "yellow"
+[[battery.display]]
+threshold = 95
+charging_symbol = "\uf584"
+discharging_symbol = "\uf581"
+style = "green"

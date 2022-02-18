@@ -1,7 +1,4 @@
 *
-!/.oh-my-zsh
-!/.oh-my-zsh-custom/
-!/.oh-my-zsh-custom/**/*
 !/.dir_colors
 !/.gitattributes_global
 !/.gitconfig
@@ -9,4 +6,10 @@
 !/.gitignore_global
 !/.gitmodules
 !/.nanorc
+!/.config/alacritty
 !/.config/bat/config
+!/.config/fish/config.fish
+!/.config/fish/completions
+!/.config/fish/conf.d
+!/.config/fish/functions
+!/.config/starship.toml
