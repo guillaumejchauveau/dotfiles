@@ -1,4 +1,5 @@
 fish_add_path $HOME/.garden/bin
+
 set fish_greeting
 
 if status is-interactive

@@ -28,7 +28,7 @@ fish_style_pwd_dir_length = 1
 truncate_to_repo = true
 truncation_length = 1
 style = "blue"
-read_only = " \uf840"
+read_only = " \uf023"
 
 [git_branch]
 format = "[$branch](bright-black) "
@@ -38,14 +38,14 @@ format = "[$hash$tag](bright-black) "
 
 [git_status]
 format = "$stashed$ahead_behind$conflicted$staged$modified$untracked"
-stashed = "[\uf187](white) "
-ahead = "[\uf077](bright-blue) "
-behind = "[\uf078](bright-blue) "
-diverged = "[\ufc09](bright-purple) "
+stashed = "[\uf192](white) "
+ahead = "[\uf139](bright-blue) "
+behind = "[\uf13a](bright-blue) "
+diverged = "[\uf057](bright-purple) "
 conflicted = "[\uf06a](red) "
 staged = "[\uf111](green) "
 modified = "[\uf10c](yellow) "
-untracked = "[\uf29c](bright-black) "
+untracked = "[\uf059](bright-black) "
 
 [fill]
 symbol = " "
@@ -55,6 +55,7 @@ format = "[\uf79f](bright-blue) "
 
 [cmd_duration]
 format = "[$duration](bright-black) "
+min_time = 3_000
 
 [status]
 disabled = false
