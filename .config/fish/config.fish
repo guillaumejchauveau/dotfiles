@@ -46,5 +46,19 @@ if status is-interactive
   set fish_color_status red
   set fish_color_search_match bryellow --background=brblack
 
+  set fish_pager_color_progress brblack
+  set fish_pager_color_background normal
+  set fish_pager_color_prefix --underline
+  set fish_pager_color_completion normal
+  set fish_pager_color_description brblack
+  # set fish_pager_color_selected_background
+  # set fish_pager_color_selected_prefix
+  # set fish_pager_color_selected_completion
+  # set fish_pager_color_selected_description
+  # set fish_pager_color_secondary_background
+  # set fish_pager_color_secondary_prefix
+  # set fish_pager_color_secondary_completion
+  # set fish_pager_color_secondary_description
+
   starship init fish | source
 end
