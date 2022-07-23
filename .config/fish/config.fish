@@ -1,8 +1,10 @@
-fish_add_path $HOME/.garden/bin
-
 set fish_greeting
 
+pyenv init --path | source
+
 if status is-interactive
+  pyenv init - | source
+  
   if test -x /usr/bin/dircolors
     if test -r ~/.dir_colors
       dircolors -c ~/.dir_colors | sed 's/setenv/set/' | source
@@ -13,14 +15,14 @@ if status is-interactive
     end
   end
 
-  abbr -a -g ls 'ls --color=auto'
-  abbr -a -g l 'ls -lahG'
-  abbr -a -g la 'ls -lAhG'
-  abbr -a -g ll 'ls -lhG'
-  abbr -a -g lsa 'ls -lah'
-  abbr -a -g grep 'grep --color=auto'
-  abbr -a -g fgrep 'fgrep --color=auto'
-  abbr -a -g egrep 'egrep --color=auto'
+  alias ls 'ls --color=auto'
+  alias l 'ls -lahG'
+  alias la 'ls -lAhG'
+  alias ll 'ls -lhG'
+  alias lsa 'ls -lah'
+  alias grep 'grep --color=auto'
+  alias fgrep 'fgrep --color=auto'
+  alias egrep 'egrep --color=auto'
 
   set fish_color_normal normal
   set fish_color_command green
