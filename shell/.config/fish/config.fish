@@ -1,9 +1,11 @@
 set fish_greeting
 
-pyenv init --path | source
+set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# pyenv init --path | source
 
 if status is-interactive
-  pyenv init - | source
+  # pyenv init - | source
   
   if test -x /usr/bin/dircolors
     if test -r ~/.dir_colors
