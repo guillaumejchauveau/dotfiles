@@ -1,0 +1,13 @@
+[Unit]
+Description=Proxy Windows SSH agent to WSL
+After=network.target
+
+[Service]
+Type=exec
+ExecStartPre=-/usr/bin/rm ${SSH_AUTH_SOCK}
+ExecStart=/usr/bin/socat UNIX-LISTEN:${SSH_AUTH_SOCK},fork EXEC:"/mnt/c/Users/a883916/go/bin/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork
+Environment=SSH_AUTH_SOCK=%h/.ssh/agent.sock
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
