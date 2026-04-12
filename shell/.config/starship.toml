@@ -10,7 +10,7 @@ $jobs\
 $cmd_duration\
 $status\
 $character\
-$time\
+$time \
 $line_break \
 [\uf054](green) \
 """
