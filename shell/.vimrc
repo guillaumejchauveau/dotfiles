@@ -1,3 +1,3 @@
 set tabstop=2 shiftwidth=2 expandtab
-filetype indent on                                                                                                                                                                                               filetype plugin indent on
-set smartindent                                                                                                                                                                                                  set autoindent                                                                                                                                                                                                   set number                                                                                                                                                                                                       set background=dark
+filetype indent on
+set smartindent
