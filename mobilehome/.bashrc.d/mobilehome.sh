@@ -6,5 +6,5 @@ mobilehome() {
       return 1
     fi
   fi
-  podman run --security-opt label=disable --userns=keep-id -v "$HOME":"/home/$USER" --tz local -w "$PWD" --rm -it mobilehome
+  podman run --security-opt label=disable --userns=keep-id -v "$HOME":"$HOME" --tz local -w "$PWD" -h "${HOSTNAME}-mobilehome" --env SSH_CONNECTION --env USER="$USER" --rm -it mobilehome
 }

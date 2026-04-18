@@ -7,8 +7,8 @@ Image=mobilehome.build
 Timezone=local
 UserNS=keep-id
 User=0
-Volume=%h:/home/%u
+Volume=%h:%h
 SecurityLabelDisable=true
 StopTimeout=1
-HostName=mobilehome
-PublishPort=2222:22
+HostName=%H-mobilehome
+Environment=USER=%u

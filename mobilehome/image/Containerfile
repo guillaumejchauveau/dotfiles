@@ -25,5 +25,5 @@ COPY --chmod=555 entrypoint.sh /entrypoint.sh
 EXPOSE 22
 VOLUME /host_keys/etc/ssh
 
-ENV USHELL=/usr/bin/bash
+ENV SHELL_=/usr/bin/bash
 ENTRYPOINT ["/entrypoint.sh"]

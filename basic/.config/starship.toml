@@ -21,7 +21,9 @@ style_user = "bright-black"
 format = "[$user]($style) "
 
 [hostname]
+ssh_only = false
 format = "[\uf564](blue) [$hostname](bright-black) "
+detect_env_vars = ['!TMUX', 'SSH_CONNECTION', 'MOBILEHOME']
 
 [directory]
 fish_style_pwd_dir_length = 1
