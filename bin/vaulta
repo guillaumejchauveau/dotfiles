@@ -75,6 +75,7 @@ if args.inner:
             file.write(file_content)
         file_path.chmod(0o600)
 
+    os.environ["VAULTA"]=""
     env = secrets_vault.get("env", {})
     if type(env) is not dict:
         raise TypeError("env must be a table")
@@ -84,7 +85,7 @@ if args.inner:
         value = string.Template(value).substitute(vars, cwd=cwd, secrets_dir=secrets_dir)
         os.environ[key]=value
 
-    shell = str(os.environ.get("SHELL"))
+    shell = str(os.environ.get("SHELL", "/bin/sh"))
     os.execvp(shell, [shell])
 else:
     os.execvp("bwrap", [

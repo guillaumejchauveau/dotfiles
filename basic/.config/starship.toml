@@ -5,6 +5,7 @@ $directory\
 $git_branch\
 $git_commit\
 $git_status\
+${env_var.vaulta}\
 $fill\
 $jobs\
 $cmd_duration\
@@ -22,7 +23,7 @@ format = "[$user]($style) "
 
 [hostname]
 ssh_only = false
-format = "[\uf564](blue) [$hostname](bright-black) "
+format = "[\uf1fa](blue) [$hostname](bright-black) "
 detect_env_vars = ['!TMUX', 'SSH_CONNECTION', 'MOBILEHOME']
 
 [directory]
@@ -48,6 +49,10 @@ conflicted = "[\uf06a](red) "
 staged = "[\uf111](green) "
 modified = "[\uf10c](yellow) "
 untracked = "[\uf059](bright-black) "
+
+[env_var.vaulta]
+variable = "VAULTA"
+format = "[\uf132](white) "
 
 [fill]
 symbol = " "
