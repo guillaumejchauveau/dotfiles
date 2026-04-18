@@ -1,0 +1,29 @@
+FROM fedora
+
+RUN dnf copr enable atim/starship -y
+RUN dnf copr enable jdxcode/mise -y
+RUN dnf install -y \
+  openssh-server \
+  starship \
+  mise \
+  openssh-clients \
+  git \
+  vim \
+  stow \
+  python3 \
+  bwrap \
+  && dnf clean all
+
+COPY <<EOF /etc/ssh/sshd_config.d/99-host_keys.conf
+HostKey /host_keys/etc/ssh/ssh_host_rsa_key
+HostKey /host_keys/etc/ssh/ssh_host_ecdsa_key
+HostKey /host_keys/etc/ssh/ssh_host_ed25519_key
+EOF
+
+COPY --chmod=555 entrypoint.sh /entrypoint.sh
+
+EXPOSE 22
+VOLUME /host_keys/etc/ssh
+
+ENV USHELL=/usr/bin/bash
+ENTRYPOINT ["/entrypoint.sh"]

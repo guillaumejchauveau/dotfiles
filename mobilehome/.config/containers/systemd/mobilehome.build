@@ -1,0 +1,6 @@
+[Build]
+ImageTag=mobilehome
+SetWorkingDirectory=../../../image
+
+[Service]
+TimeoutStartSec=900

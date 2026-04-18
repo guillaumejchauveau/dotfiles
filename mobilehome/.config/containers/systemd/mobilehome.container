@@ -1,0 +1,14 @@
+[Unit]
+Description=Mobilehome container
+
+[Container]
+Volume=mobilehome.volume:/host_keys/etc/ssh
+Image=mobilehome.build
+Timezone=local
+UserNS=keep-id
+User=0
+Volume=%h:/home/%u
+SecurityLabelDisable=true
+StopTimeout=1
+HostName=mobilehome
+PublishPort=2222:22
