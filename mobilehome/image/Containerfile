@@ -1,4 +1,4 @@
-FROM fedora
+FROM docker.io/fedora
 
 RUN dnf copr enable atim/starship -y
 RUN dnf copr enable jdxcode/mise -y
@@ -10,6 +10,7 @@ RUN dnf install -y \
   git \
   vim \
   stow \
+  tmux \
   python3 \
   bwrap \
   && dnf clean all
