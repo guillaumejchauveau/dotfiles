@@ -1,25 +1,23 @@
 format = """
- $username\
+$username\
 $hostname\
 $directory\
 $git_branch\
 $git_commit\
 $git_status\
 ${env_var.vaulta}\
-$fill\
 $jobs\
 $cmd_duration\
 $status\
-$character\
-$time \
-$line_break \
-[\uf054](green) \
+$line_break\
+[\uf054](bright-black) \
 """
 
 [username]
 style_root = "red"
 style_user = "bright-black"
 format = "[$user]($style) "
+detect_env_vars = ['!TMUX']
 
 [hostname]
 ssh_only = false
@@ -27,51 +25,44 @@ format = "[\uf1fa](blue) [$hostname](bright-black) "
 detect_env_vars = ['!TMUX', 'SSH_CONNECTION', 'MOBILEHOME']
 
 [directory]
+format = "[$path](blue)[$read_only](red)"
 fish_style_pwd_dir_length = 1
 truncate_to_repo = true
 truncation_length = 1
-style = "blue"
 read_only = " \uf023"
 
 [git_branch]
-format = "[$branch](bright-black) "
+only_attached = true
+format = " [\ue0b6](black)[\ueafc](blue bg:black)[ $branch](bg:black)"
 
 [git_commit]
-format = "[$hash$tag](bright-black) "
+tag_disabled = false
+format = " [\ue0b6](black)[\ueabc](blue bg:black)[ $hash](bg:black)[$tag](bg:black dimmed)"
+tag_symbol = "#"
 
 [git_status]
-format = "$stashed$ahead_behind$conflicted$staged$modified$untracked"
-stashed = "[\uf192](white) "
-ahead = "[\uf139](bright-blue) "
-behind = "[\uf13a](bright-blue) "
-diverged = "[\uf057](bright-purple) "
-conflicted = "[\uf06a](red) "
-staged = "[\uf111](green) "
-modified = "[\uf10c](yellow) "
-untracked = "[\uf059](bright-black) "
+format = "[$stashed$ahead_behind$conflicted$staged$modified$untracked](bg:black)[\ue0b4](black)"
+stashed = " [\uf192](white bg:black)"
+ahead = " [\uf139](blue bg:black)"
+behind = " [\uf13a](blue bg:black)"
+diverged = " [\uf057](purple bg:black)"
+conflicted = " [\uf06a](red bg:black)"
+staged = " [\uf111](green bg:black)"
+modified = " [\ueabc](yellow bg:black)"
+untracked = " [\uf059](bright-black bg:black)"
 
 [env_var.vaulta]
 variable = "VAULTA"
-format = "[\uf132](white) "
-
-[fill]
-symbol = " "
+format = " [\ue0b6](black)[\uf132](blue bg:black)[ $env_value](bg:black)[\ue0b4](black)"
 
 [jobs]
-format = "[\uf79f](bright-blue) "
+number_threshold = 1
+format = " [\ue0b6](black)[\ueabc](blue bg:black)[ $number](bg:black)[\ue0b4](black)"
 
 [cmd_duration]
-format = "[$duration](bright-black) "
+format = " [\ue0b6](black)[\uf2f2](blue bg:black)[ $duration](bg:black)[\ue0b4](black)"
 min_time = 3_000
 
 [status]
 disabled = false
-format = "[($common_meaning$signal_name )$status](red) "
-
-[character]
-success_symbol = "[\uf111](green)"
-error_symbol = "[\uf111](red)"
-
-[time]
-disabled = false
-format = "[$time](bright-black)"
+format = " [\ue0b6](black)[\uf06a](red bg:black)[ $maybe_int$common_meaning$signal_name](bg:black)[\ue0b4](black)"
