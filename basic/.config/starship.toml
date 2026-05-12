@@ -66,3 +66,6 @@ min_time = 3_000
 [status]
 disabled = false
 format = " [\ue0b6](black)[\uf06a](red bg:black)[ $maybe_int$common_meaning$signal_name](bg:black)[\ue0b4](black)"
+
+[fill]
+symbol = " "
